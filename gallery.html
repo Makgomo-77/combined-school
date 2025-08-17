@@ -1,1 +1,283 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Phalaborwa Combined School</title>
+    <style>
+        /* Reuse styles from homepage and add specific styles for gallery page */
+        
+        .gallery-header {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('gallery-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
+        
+        .gallery-header h1 {
+            font-size: 3rem;
+            color: var(--secondary);
+        }
+        
+        .gallery-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+        
+        .gallery-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .filter-btn {
+            padding: 8px 20px;
+            background-color: var(--light);
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            aspect-ratio: 4/3;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+        
+        .video-section {
+            background-color: var(--light);
+            padding: 50px 20px;
+            text-align: center;
+        }
+        
+        .video-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+        }
+        
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="school-logo.png" alt="Phalaborwa Combined School Logo">
+                <div class="logo-text">
+                    <h1>Phalaborwa Combined School</h1>
+                    <p>Primary & High School - Excellence in Education</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="gallery-header">
+        <h1>School Gallery</h1>
+    </section>
+    
+    <section class="gallery-content">
+        <div class="section-title">
+            <h2>Life at Phalaborwa Combined</h2>
+            <p>Explore moments from our vibrant school community through these images and videos</p>
+        </div>
+        
+        <div class="gallery-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="primary">Primary School</button>
+            <button class="filter-btn" data-filter="highschool">High School</button>
+            <button class="filter-btn" data-filter="sports">Sports</button>
+            <button class="filter-btn" data-filter="events">Events</button>
+            <button class="filter-btn" data-filter="facilities">Facilities</button>
+        </div>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item" data-category="primary">
+                <img src="gallery1.jpg" alt="Primary school students in classroom">
+                <div class="gallery-caption">
+                    <h3>Interactive Learning</h3>
+                    <p>Grade 3 students engaged in a hands-on science experiment</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="highschool">
+                <img src="gallery2.jpg" alt="High school science lab">
+                <div class="gallery-caption">
+                    <h3>Science Exploration</h3>
+                    <p>Grade 10 students conducting experiments in our modern lab</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="sports">
+                <img src="gallery3.jpg" alt="School soccer match">
+                <div class="gallery-caption">
+                    <h3>Sports Day</h3>
+                    <p>Annual inter-house athletics competition</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="events">
+                <img src="gallery4.jpg" alt="Cultural performance">
+                <div class="gallery-caption">
+                    <h3>Cultural Festival</h3>
+                    <p>Students showcasing traditional dances</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="facilities">
+                <img src="gallery5.jpg" alt="School library">
+                <div class="gallery-caption">
+                    <h3>Learning Resource Center</h3>
+                    <p>Our well-stocked library with quiet study areas</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="primary">
+                <img src="gallery6.jpg" alt="Grade R classroom">
+                <div class="gallery-caption">
+                    <h3>Early Childhood</h3>
+                    <p>Our Grade R students enjoying play-based learning</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="highschool">
+                <img src="gallery7.jpg" alt="Matric dance">
+                <div class="gallery-caption">
+                    <h3>Matric Dance</h3>
+                    <p>Grade 12 students celebrating their formal dance</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="events">
+                <img src="gallery8.jpg" alt="Award ceremony">
+                <div class="gallery-caption">
+                    <h3>Academic Excellence</h3>
+                    <p>Annual awards ceremony honoring top achievers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="video-section">
+        <div class="section-title">
+            <h2>School Videos</h2>
+            <p>Watch highlights from school events and daily activities</p>
+        </div>
+        
+        <div class="video-container">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/example1" allowfullscreen></iframe>
+            </div>
+            
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/example2" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <!-- Same footer as homepage -->
+    </footer>
+    
+    <script>
+        // Simple gallery filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                const filter = btn.dataset.filter;
+                const galleryItems = document.querySelectorAll('.gallery-item');
+                
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.dataset.category.includes(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

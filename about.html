@@ -1,1 +1,221 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Phalaborwa Combined School</title>
+    <style>
+        /* Reuse styles from homepage and add specific styles for about page */
+        
+        .about-header {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('school-campus.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
+        
+        .about-header h1 {
+            font-size: 3rem;
+            color: var(--secondary);
+        }
+        
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+        
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+        
+        .about-section img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .about-text h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        
+        .mission-vision {
+            background-color: var(--light);
+            padding: 50px 20px;
+        }
+        
+        .mv-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .mv-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .mv-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .stats {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .stat-item {
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--dark);
+        }
+        
+        @media (max-width: 768px) {
+            .about-section, .mv-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-section img {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="school-logo.png" alt="Phalaborwa Combined School Logo">
+                <div class="logo-text">
+                    <h1>Phalaborwa Combined School</h1>
+                    <p>Primary & High School - Excellence in Education</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="about-header">
+        <h1>About Our School</h1>
+    </section>
+    
+    <section class="about-content">
+        <div class="about-section">
+            <div class="about-text">
+                <h2>Our History</h2>
+                <p>Founded in 1985, Phalaborwa Combined School has grown from a small community school to one of the most respected educational institutions in the region. What began as a primary school serving local families expanded in 1998 to include high school grades, creating a seamless educational journey for our students.</p>
+                <p>Over the years, we've maintained our commitment to academic excellence while adapting to the changing needs of our students and community. Our beautiful campus has evolved with modern facilities while preserving the warm, nurturing atmosphere that has always been our hallmark.</p>
+            </div>
+            <img src="old-school.jpg" alt="Historical photo of our school">
+        </div>
+        
+        <div class="about-section">
+            <img src="modern-classroom.jpg" alt="Modern classroom facilities">
+            <div class="about-text">
+                <h2>Our Facilities</h2>
+                <p>Our campus features state-of-the-art learning environments designed to inspire and support students at every level:</p>
+                <ul>
+                    <li>Spacious, technology-equipped classrooms</li>
+                    <li>Specialized science and computer labs</li>
+                    <li>Comprehensive library with digital resources</li>
+                    <li>Sports fields and gymnasium</li>
+                    <li>Performing arts center</li>
+                    <li>Secure playgrounds for younger students</li>
+                </ul>
+                <p>We continuously invest in our facilities to ensure they meet the highest standards for 21st century learning.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="mission-vision">
+        <div class="mv-container">
+            <div class="mv-card">
+                <h3>Our Mission</h3>
+                <p>To provide a transformative educational experience that empowers students to achieve their full potential academically, socially, and personally. We foster a love of learning, critical thinking skills, and ethical values that prepare students to be responsible citizens and leaders in their communities.</p>
+            </div>
+            
+            <div class="mv-card">
+                <h3>Our Vision</h3>
+                <p>To be recognized as a premier educational institution that sets the standard for excellence in combined schooling, where every student is known, valued, and inspired to excel. We envision graduates who are confident, compassionate, and equipped to meet the challenges of an interconnected world.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="stats">
+        <div class="section-title">
+            <h2>By The Numbers</h2>
+            <p>Our commitment to excellence is reflected in these achievements</p>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">38</div>
+                <div class="stat-label">Years of Excellence</div>
+            </div>
+            
+            <div class="stat-item">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Matric Pass Rate</div>
+            </div>
+            
+            <div class="stat-item">
+                <div class="stat-number">24</div>
+                <div class="stat-label">Extracurricular Activities</div>
+            </div>
+            
+            <div class="stat-item">
+                <div class="stat-number">1:18</div>
+                <div class="stat-label">Teacher-Student Ratio</div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <!-- Same footer as homepage -->
+    </footer>
+</body>
+</html>

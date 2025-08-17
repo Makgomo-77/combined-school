@@ -1,1 +1,287 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions | Phalaborwa Combined School</title>
+    <style>
+        /* Reuse styles from homepage and add specific styles for admissions page */
+        
+        .admissions-header {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('admissions.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
+        
+        .admissions-header h1 {
+            font-size: 3rem;
+            color: var(--secondary);
+        }
+        
+        .admissions-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+        
+        .admissions-intro {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .admissions-intro h2 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .step {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            border-top: 5px solid var(--primary);
+        }
+        
+        .step-number {
+            background-color: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-weight: bold;
+        }
+        
+        .step h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .fees-structure {
+            background-color: var(--light);
+            padding: 50px 20px;
+        }
+        
+        .fees-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .location {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        
+        .map-container {
+            max-width: 1000px;
+            margin: 30px auto;
+            height: 500px;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .downloads {
+            text-align: center;
+            margin: 50px 0;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 10px;
+            transition: all 0.3s;
+        }
+        
+        .download-btn:hover {
+            background-color: var(--secondary);
+            color: var(--dark);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="school-logo.png" alt="Phalaborwa Combined School Logo">
+                <div class="logo-text">
+                    <h1>Phalaborwa Combined School</h1>
+                    <p>Primary & High School - Excellence in Education</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="admissions-header">
+        <h1>Admissions</h1>
+    </section>
+    
+    <section class="admissions-content">
+        <div class="admissions-intro">
+            <h2>Join Our School Community</h2>
+            <p>We're delighted you're considering Phalaborwa Combined School for your child's education. Our admissions process is designed to be straightforward and transparent. Below you'll find all the information you need to begin your journey with us.</p>
+        </div>
+        
+        <h2 class="section-title">Admissions Process</h2>
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Inquiry</h3>
+                <p>Contact our admissions office or attend an open house to learn more about our programs and philosophy.</p>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Application</h3>
+                <p>Submit the completed application form along with required documents and the application fee.</p>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Assessment</h3>
+                <p>Students may be assessed to determine appropriate grade placement (Grade 1 and above).</p>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Acceptance</h3>
+                <p>Receive notification of acceptance and complete enrollment paperwork.</p>
+            </div>
+        </div>
+        
+        <div class="admissions-intro">
+            <h2>2024 Admission Rates</h2>
+            <p>We strive to keep our fees competitive while maintaining the highest standards of education and facilities.</p>
+        </div>
+    </section>
+    
+    <section class="fees-structure">
+        <div class="fees-container">
+            <h2 class="section-title">Fee Structure (2024 Academic Year)</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Grade Level</th>
+                        <th>Annual Tuition</th>
+                        <th>Registration Fee</th>
+                        <th>Other Fees*</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Grade R (Reception)</td>
+                        <td>R18,500</td>
+                        <td>R1,500</td>
+                        <td>R2,800</td>
+                    </tr>
+                    <tr>
+                        <td>Grades 1-3</td>
+                        <td>R22,000</td>
+                        <td>R1,500</td>
+                        <td>R3,200</td>
+                    </tr>
+                    <tr>
+                        <td>Grades 4-7</td>
+                        <td>R25,500</td>
+                        <td>R1,500</td>
+                        <td>R3,500</td>
+                    </tr>
+                    <tr>
+                        <td>Grades 8-9</td>
+                        <td>R28,000</td>
+                        <td>R1,500</td>
+                        <td>R4,000</td>
+                    </tr>
+                    <tr>
+                        <td>Grades 10-12</td>
+                        <td>R31,000</td>
+                        <td>R1,500</td>
+                        <td>R4,500</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p>*Other fees include stationery, textbook rental, and extracurricular activities. Uniforms and some trips are additional.</p>
+            
+            <div class="downloads">
+                <a href="admissions-policy.pdf" class="download-btn">Download Admissions Policy</a>
+                <a href="fee-payment-options.pdf" class="download-btn">Payment Options</a>
+                <a href="application-form.pdf" class="download-btn">Download Application Form</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="location">
+        <h2 class="section-title">Our Location</h2>
+        <p>123 Education Street, Phalaborwa, 1390</p>
+        
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.267578125!2d31.14122531538403!3d-23.4429729847145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec6c8a6b0b5b5b5%3A0x1ec6c8a6b0b5b5b5!2sPhalaborwa%20Combined%20School!5e0!3m2!1sen!2sza!4v1620000000000!5m2!1sen!2sza" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+    
+    <footer>
+        <!-- Same footer as homepage -->
+    </footer>
+</body>
+</html>
